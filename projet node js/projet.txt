@@ -1,0 +1,10 @@
+Plugin google DHC permet de tester une inplémentation REST et de voir le résultat directement
+1.installation d'express : npm isntall express --save-dev     les option permettent de mettre à jour le fichier de dépendance de packet,le package.json permet grâce à npm init ou install d'aller
+chercher les bon paquet et d'installer si l'application ne les possède pas
+installtion de mongoose : npm install mongoose --save-dev
+installation de path : npm install path --save-dev
+installation de mongodb : aller sur le site mongodb
+installation de pow-mongodb-fixtures : npm install pow-mongodb-fixtures --save-dev, commande pour charger les fixtures dans la base mongofixtures <dbname> <fixture file> il faut aussi installer
+le module en globale pour que la commande prècédente fonction npm install pow-mongodb-fixtures -g
+installation de bluebird pour les promises(function callback) : npm install bluebird --save-dev
+installation express-handlebars est le moteur de du template : npm install express-handlebars --save-dev
