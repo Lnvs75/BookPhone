@@ -16,6 +16,8 @@ fs = Promise.promisifyAll(require('fs'));
 var express = require("express");
 var engine = require('ejs-locals');
 
+// Pour la partie session 
+var session = require('express-session');
 
 
 
