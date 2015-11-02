@@ -20,21 +20,25 @@ exports.index = function(requete, reponse){
 
 exports.one = function(requete, reponse) {
     // requette.params.name permet d'aller chercher le nom du paramètre dans l'url.
-    var options = {users : requete.body.name};
-    console.log(options);
-    var retourReponse = function (objet) {
+   console.log(requete.body.objetutilisateur);
+    if(requete.body.objetutilisateur){
+        models.User.findOne({'name' : requete.body.objetutilisateur}, function(err,user) {
+            if(!err){
+                if(user){
+                    console.log(user);
 
-        reponse.render('afficheuncontact.ejs', {users : objet});
+                    reponse.render('afficheuncontact.ejs', {"users" : user});
+                }else{
+                    reponse.render('errserchcontact.ejs');
+                }
 
-        return objet;
-    };
-    if (options) {
-        models.User.findOneAsync(options)
+            }else{
 
-            .then(retourReponse)
-            .then(libLog.affichContentConsole)
+            }
+        });
     }
 };
+
 
 exports.create = function(requete, reponse){
     var envoiOkretouneRep = function(content){

@@ -7,5 +7,5 @@ exports.schema = new mongoose.Schema({
     lastname : {type : String, maxlength : 50},
     age : {type: String, min : 10, max : 100},
     job : String,
-    tel : { type : String, maxlength : 12}
+    tel : { type : String, maxlength : 10}
 });

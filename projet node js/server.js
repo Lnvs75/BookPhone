@@ -5,6 +5,7 @@
 Promise = require('bluebird');
 // en global avec le module bluebird
 mongoose = Promise.promisifyAll(require('mongoose'));
+//mongoose = require('mongoose');
 // on charge notre library en global
 libLog = require('./lib/log.js');
 var path = require("path");
@@ -58,3 +59,4 @@ require('./routing/users.js');
 
 
 app.listen(3000);
+
